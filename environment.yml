@@ -1,4 +1,4 @@
-name: st_mlApp
+name: st_ml_diversity_App
 channels:
   - defaults
 dependencies:
@@ -7,4 +7,3 @@ dependencies:
   - pip:
     - streamlit
     - watchdog
-prefix: /Users/cly20/anaconda3/envs/mlforAOD
