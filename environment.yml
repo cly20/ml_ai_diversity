@@ -1,0 +1,10 @@
+name: st_mlApp
+channels:
+  - defaults
+dependencies:
+  - pip=24.2=py313hca03da5_0
+  - python=3.13.0=h4862095_100_cp313
+  - pip:
+    - streamlit
+    - watchdog
+prefix: /Users/cly20/anaconda3/envs/mlforAOD
