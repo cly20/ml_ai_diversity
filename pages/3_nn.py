@@ -6,8 +6,19 @@ st.set_page_config(layout="wide", page_title="NNs")
 st.title("Neural Networks")
 
 st.header("What is a Neural Network?")
+st.markdown("""
+            A **neural network** is a machine learning model inspired by how the human brain processes information.
 
-st.header("Brief History")
+            It consists of layers of interconnected neurons. Each connection has a **weight**, and the network lerans by adjusting these weights
+            during training.
+
+            Neural networks and especially useful for tasks like:
+            - Image recognition
+            - Natural language processing
+            - Speech recognition
+
+            **POINT TO SOME BRIEF HISTORY ABOUT NEURAL NETWORKS INSTEAD OF WRITING ABOUT IT??**
+            """)
 
 st.header("Basic Structure")
 
