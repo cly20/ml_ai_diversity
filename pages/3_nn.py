@@ -52,11 +52,7 @@ st.markdown("""
             - Natural language processing
             - Speech recognition
 
-            **POINT TO SOME BRIEF HISTORY ABOUT NEURAL NETWORKS INSTEAD OF WRITING ABOUT IT??**
             """)
-
-st.header("Applications of Neural Networks")
-st.markdown("**Can probably mention this in first section**")
 
 
 st.header("Basic Structure")
@@ -486,23 +482,17 @@ st.info("""
 
 
 
-st.header("Python Tools Required")
-st.markdown("""
-            **Define basic python tools required**
-            """)
-
-
 st.header("Bilding a Neral Network from Scratch in Pyhton")
 st.markdown("""
-            Now it's your turn to build a neural network from scratch using python! Follow the instructions in the notebook below.
+            Now it's your turn to build a neural network from scratch using Python!
 
-            Point to jupyter notebook. Embeded notebook in github.
+            Click below to open the guided notebook:
             """)
 
-
-st.header("Existing Python Libraries for NN")
-
-
+st.link_button(
+    "🚀 Open Notebook (your own copy)",
+    "https://colab.research.google.com/drive/1Wqi3-ijbr-MIyZjpvuNx6VLR7FvohQDZ/copy"
+)
 
 
 col1, col2 = st.columns(2)
