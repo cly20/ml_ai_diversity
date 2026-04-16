@@ -491,7 +491,7 @@ st.markdown("""
 
 st.link_button(
     "🚀 Open Notebook (your own copy)",
-    "https://colab.research.google.com/drive/1Wqi3-ijbr-MIyZjpvuNx6VLR7FvohQDZ/copy"
+    "https://colab.research.google.com/drive/1Wqi3-ijbr-MIyZjpvuNx6VLR7FvohQDZ?copy=true"
 )
 
 
