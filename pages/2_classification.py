@@ -116,7 +116,8 @@ An illustration of the "garbage in == garbage out" maxim which we must
 always be mindful of in machine learning. "Garbage" can be as simple as 
 poorly formatted or normalised data but can also be all the biases which one
 puts into a model's training data. *xkcd 1838*.
-"""
+""",
+width=400
 )
 
 st.image("images/multidimPlot.png",
@@ -166,37 +167,152 @@ using an example taken from Loyola University Chicago Law Journal.
 """)
 
 st.markdown(
-"""
+r"""
 # Assessing a classifer model
 
 ## ROC curves
-blah blah blah
+In a binary classification problem, any result contains some inherent rate
+of drawing false positives in addition to desirable true positives.
+Using this understanding allows us to assess the effectiveness of a 
+machine learning classifier using a receiver operator characteristic or 
+**ROC curve**.
+
+The figure below demonstrates how this metric relates to the output of some 
+classifer model. 
+Let's assume a machine learning classifier has been trained and assigns 
+some score $x$ to some data. This score then needs to be used to
+differentiate between "positive" $Y=1$ and "negative" $Y=0$ datapoints.
+In order to use this score $x$, some selection boundary (green line) has
+to be decided to convert this score into a predicted classification 
+$\bar{Y}$.
+
+In a dream world, it is possible to choose a boundary such that $\bar{Y}=Y$
+for **all** data passing through the model. Unfortunately, the reality is 
+that for any choice of boundary in the model's output, there is some chance
+that
+1. not all true positives $\bar{Y}=Y=1$ are selected (TPR$<100\%$)
+2. some false postives $\bar{Y}=1,~Y=0$ are selected (FPR$>0\%$)
+
+where such true- and false-positive rates depend on how aggressive the 
+decision boundary is.
+
+Therefore, ROC curves provide a visual tool for assessing how well a ML
+classifier performs at separating the data. The closer an ROC curve is to
+the upper-left corner, the better the model is expected to perform. The
+closer it is to the diagonal line, the closer the model is to behaving as
+a random selection corner, the better the model is expected to perform. The
+closer it is to the diagonal line, the closer the model is to behaving as
+a random selection.
+
+Depending also on the shape of the ROC curve, a decision may also be made
+regarding how aggressively to apply the classifier's output, in addition to
+deciding whether to seek further optimisations through the choice of model
+hyperparameters (discussed in linked tutorial at bottom of page). 
 """)
 
 st.image("images/ROC_curves.png",
 caption="""
-TEST
+An illustration of an ROC curve (lower) in relation to data with a positive
+and negative target label.
+Upper left: A bimodal distribution of positive (red) and negative (blue) 
+data as a function of some variable $x$. The vertical green line indicates 
+a choice of selection along the $x$-axis to define a prediction $\bar{Y}$. 
+For any choice, it is possible to compare this against the truth label $Y$
+and calculate the true- and false-positive rates.
+Upper right: A confusion matrix showing the relationship between predicted 
+and truth labels and the following rates: true- and false-positive (TP, FP)
+& false- and true-negative (FN, TN).
+Lower: The ROC curve is plotted by scanning the selection boundary in the 
+upper left plot across all possible choices - between fully exclusive and 
+fully inclusive. Random selection (flat 50% probability) is shown in the
+diagnonal straight line while increasingly powerful selections have their 
+ROC close to the upper left of the axes.
+Image by kakau, Wikipedia Commons.
 """)
 
 st.markdown(
 """
 ## Managing over- and under-training
+Let's assume we've developed a model which we believe to be optimised for 
+our purposes according to the above. Its performance on the seen training
+data is very strong so we now want to apply the model to some new, unseen
+data. 
 
-blah blah blah
+### Can we be certain that the model is robust and will behave consistently?
 
+**In general, not unless we have tested for for overtraining.**
+
+It is possible for a trained classifier to behave amazingly for
+its training data but then behave inconsistently for new, unseen data. In
+particular, we are concerned with the model behaving **overaggresively**
+based on the data it has been trained with such that it no longer fits
+more general patterns observable in unseen data. 
+An example of **overtraining** or **overfitting** is shown below:
+""")
+
+st.image("images/overfitting.png",
+caption="""
+An illustration of overfitting inherent to using finite datasets during
+training.
+""")
+
+st.markdown(
+r"""
+As a result of models being developed using only a *finite* dataset, there
+is always a risk that a model identifies "patterns" among the data which 
+vanish when more data is introduced. 
+This is why it is *essential* to test machine learning classifiers on some
+data which wasn't used during training - called a *test dataset*. Typically
+a known, labelled dataset is split such that the majority is used to *train*
+while a minority ($10-20\%$) is used for testing. 
+
+If a classifier behaves
+the same with the test dataset as the train dataset, this indicates that 
+the model is robust; i.e. we can be confident that it'll behave in a 
+well-defined way when used for its intended purpose. 
+
+If a classifier behaves differently between the two datasets, this indicates
+**overtraining** and suggests that the model will not behave in a 
+well-understood way *in-situ*. The solution is to revisit how the model is 
+setup and start training again.
+
+### Hyperparameter optimisation
+
+If metrics such as the accuracy or ROC curve indicate **undertraining** 
+- a model behaving poorly as a result of it not "making the most" of the 
+train dataset - or if comparison between train and test datasets indicate 
+**overtraining**, the **hyperparameters** which define the model's behaviour
+have to be reconsidered.
+
+These are tuneable parameters that define the machine learning architecture
+and how the model evolves during training. Examples include:
+
+- The choice of model itself
+- The depth of a decision tree
+- The number of hidden layers in a neural network
+- The choice of optimisation function used at various points in a model
+
+A simple rule-of-thumb to understand what a hyperparameter is when it comes
+to coding-in a model is this:
+**If it is an adjustable parameter during a machine learning model's 
+initialisation, it is probably a hyperparameter.**
+ 
 """)
 
 st.title("Over to you!")
 
 st.markdown("""
 
-## Can you train a model to determine whether a passenger survived the Titanic disaster or not?
+## Can you train a model to determine whether a passenger survived the 
+Titanic disaster or not?
 
-This tutorial provides a very brief rundown of how to use machine learning for
-classification in python. This tutorial uses scikit-learn because of its relative simplicity.
+This tutorial provides a very brief rundown of how to use machine learning 
+for classification in python. This tutorial uses scikit-learn because of its 
+relative simplicity.
 
-While you should be able to get started very quickly, you are encouraged to consider the steps
-more carefully to ensure a robust result.
+While you should be able to get started very quickly, you are encouraged to 
+consider the steps more carefully to ensure a robust result. Keep in mind the
+discussions above.
 
 To access the tutorial, click the link to take you to Binder:
 
