@@ -22,11 +22,11 @@ and in which sections
 
 # Credits
 
-Part of an ESPRC-funded project led by Dr Alice King at the University of Sussex.
+Part of an ESPRC-funded project led by **Dr Alice King** at the University of Sussex.
 
-Caley Yardley, lead developer
-Eva Sabater-Andres, content developer (Neural Networks)
-Lauren McMahon, content developer (AI ethics)
+- Caley Yardley, lead developer
+- Eva Sabater-Andres, content developer (Neural Networks)
+- Lauren McMahon, content developer (AI ethics)
 
 A University of Sussex project.
 
