@@ -38,6 +38,14 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+st.title("AI & ML diversity")
+col1, col2 = st.columns([0.7, 0.3])
+
+with col1:
+        st.image("assets/SusxHorizontal.jpg")
+with col2:
+        st.image("assets/ukri-epsrc-square-logo.png")
+
 st.title("Neural Networks")
 
 st.header("What is a Neural Network?")
