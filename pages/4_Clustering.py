@@ -55,7 +55,7 @@ Click the link to access the tutorial on Binder:
 """)
 
 
-#if st.button("Next page"):
-  #st.switch_page("pages/3_nn.py")
+if st.button("Next page"):
+  st.switch_page("pages/5_AI_Ethics.py")
 if st.button("Previous page"):
-  st.switch_page("pages/3_nn.py")
+  st.switch_page("pages/3_Neural_Networks.py")

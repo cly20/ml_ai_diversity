@@ -86,3 +86,6 @@ AI or ML also need large amounts of water to function. The water is used in the 
 
 """
 )
+
+if st.button("Previous page"):
+  st.switch_page("pages/4_Clustering.py")

@@ -53,6 +53,6 @@ st.markdown(
 #)
 
 if st.button("Next page"):
-  st.switch_page("pages/2_classification.py")
+  st.switch_page("pages/2_Classification.py")
 if st.button("Previous page"):
   st.switch_page("Welcome.py")
