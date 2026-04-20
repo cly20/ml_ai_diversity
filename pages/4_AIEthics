@@ -1,7 +1,7 @@
 import streamlit as st
 from streamlit.components import v1 as st_comp
 
-st.set_page_config(layout="wide", page_title="Intro")
+st.set_page_config(layout="wide", page_title="Ethics")
 
 st.title("Ethics in the Use and Developement of AI or ML algorithms")
 
@@ -41,5 +41,16 @@ When creating or using an algorithm the ideal would be to acknowledge the viewpo
 Beyond ethical considerations surrounding the inputs and output to these models, there should also be acknowledgement of the environmental impacts the data centers needed for AI or ML algorithms. There are two issues driving these impacts: the energetic need and the water need. AI and ML use GPUs over CPUs to run given the large processing power needed. The larger processing power translates to a larger energetic demand for the data centers where the server racks are stored. This energy is largely obtained from fossil fuels, a non renewable source which is well known to lead to global warming and environmental damage. It would not be possible to instead use renewable energy sources due to the variability of the energy demand. Equally, it is currently not feasible to use nuclear power: the infrastructure needed in the generation of nuclear energy is not present near the data centers and the time frame needed to build it rules it out as a solution for the problem in the near future. There is no clear way to make the energetic demands of AL or ML not be damaging to the environment. 
 
 AI or ML also need large amounts of water to function. The water is used in the manufacturing of the server parts - ultrapure water is used to clean parts in the manufacturing process, it is also used in the power plants that provide electricity to the data centers and finally it is used in the cooling of GPUs. CPUs can be cooled with air cooling but that is not efficient enough for GPUs. Furthermore, cooling must be done with fresh water as salt water clogs the systems. To reduce the water need, it would be better to use a contained cooling system which would not need the constant injection of more fresh water but this is not commonly used as it is a more costly system. It would also be better to change the manufacturing process to use alternatives that do not need water. The main concern with these impacts is that both the high energetic and water demand of these data centers diverts these resources from more useful areas like providing drinking water and electricity to local communities. 
+
+###Further Reading 
+- [“The Ethics of AI” - an online course by the University of Helsinki](https://ethics-of-ai.mooc.fi)
+- [“How AI reduces the world to stereotypes” - an interactive article](https://restofworld.org/2023/ai-image-stereotypes/)
+- [“What I Mean When I Say Critical AI Literacy” - a critique by Professor Maha Bali](https://blog.mahabali.me/educational-technology-2/what-i-mean-when-i-say-critical-ai-literacy/)
+- [“Power, Heat and Intelligence - AI Data Centers Explained” - on energetic and water needs](https://huggingface.co/blog/sasha/ai-data-centers-explained) 
+- [“Environmental Footprint Estimator” - an app](https://sites.google.com/i-biology.net/ai-footprint-estimator/home)
+- [“Calculating the cost of ChatGPT”  - by Christ Pointon](https://medium.com/@chrispointon/the-carbon-footprint-of-chatgpt-e1bc14e4cc2a)
+- [“AI-generated deepfakes are moving fast. Policymakers can't keep up” - by Shannon Bond](https://www.npr.org/2023/04/27/1172387911/how-can-people-spot-fake-images-created-by-artificial-intelligence)
+- [“AI Is Coming For Commercial Art Jobs. Can It Be Stopped?” - by Rob Salkowitz](https://www.forbes.com/sites/robsalkowitz/2022/09/16/ai-is-coming-for-commercial-art-jobs-can-it-be-stopped/?sh=7de80a1154b0)
+
 """
 )
