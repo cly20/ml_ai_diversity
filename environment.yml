@@ -7,4 +7,4 @@ dependencies:
   - pip:
     - streamlit==1.56.0
     - watchdog
-    - matplotlib==3.6.2
+    - matplotlib
