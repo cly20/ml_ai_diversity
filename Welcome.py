@@ -65,7 +65,7 @@ Part of an ESPRC-funded project on AI & ML diversity led by Dr Alice King
 at the University of Sussex.
 
 - Caley Yardley, lead developer
-- Eva Sabater-Andres, content developer (neural networks)
+- Eva Sabater Andres, content developer (neural networks)
 - Lauren McMahon, content developer (AI ethics) 
 """
 )

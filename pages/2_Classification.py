@@ -327,8 +327,11 @@ To access the tutorial, click the link to take you to Binder:
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cly20/ml_classification_tutorial/HEAD?urlpath=%2Fdoc%2Ftree%2FTitanicClassification.ipynb)
 
 """)
+col1, col2 = st.columns(2)
+with col1:
+        if st.button("Previous page"):
+                st.switch_page("pages/1_Intro.py")
+with col2:
+        if st.button("Next page"):
+                st.switch_page("pages/3_Neural_Networks.py")
 
-if st.button("Next page"):
-  st.switch_page("pages/3_Neural_Networks.py")
-if st.button("Previous page"):
-  st.switch_page("pages/1_Intro.py")
