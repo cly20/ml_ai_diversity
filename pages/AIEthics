@@ -6,5 +6,8 @@ st.set_page_config(layout="wide", page_title="Intro")
 st.title("Introduction")
 
 st.markdown(
+As AI becomes more accessible as an everyday tool and is incorporated in more decisions that can affect the common good, it is increasingly important to understand the ethics and inherent caveats associated with its use. Whether an algorithm user or developer, it is the responsibility of any who use AI or ML to understand not just the output of a query or model but also the biases that come with it. Every tool has its issues and AI and ML are no different, they have expansive effects on data privacy, security and the environment. 
+
+TO AVOID BREACHES IN PRIVACY, ENSURE DATA COLLECTED BY A PROGRAM IS COLLECTED, STORED, USED AND DESTROYED PROPERLY. 
 
 )
