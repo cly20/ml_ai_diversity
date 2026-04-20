@@ -2,8 +2,8 @@ name: st_ml_diversity_App
 channels:
   - defaults
 dependencies:
-  - pip=24.2=py313hca03da5_0
-  - python=3.13.0=h4862095_100_cp313
+  - pip==24.2
+  - python==3.13.0
   - pip:
-    - streamlit
+    - streamlit==1.56.0
     - watchdog

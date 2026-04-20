@@ -498,7 +498,7 @@ st.link_button(
 col1, col2 = st.columns(2)
 with col1:
     if st.button("Previous page"):
-        st.switch_page("pages/1_Intro.py")  # CAHNGE
+        st.switch_page("pages/2_classification.py")  # CAHNGE
 with col2:
     if st.button("Next page"):
-        st.switch_page("pages/3_<InsertPageName>.py")  # CHANGE
+        st.switch_page("pages/4_clustering.py")  # CHANGE
