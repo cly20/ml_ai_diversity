@@ -22,11 +22,11 @@ and in which sections
 
 # Credits
 
-ESPRC-funded project led by Dr Alice King.
+Part of an ESPRC-funded project led by Dr Alice King at the University of Sussex.
 
-Caley Yardley (role tbc)
-Eva Sabater Andres (role tbc)
-Lauren McMahon (role tbc)
+Caley Yardley, lead developer
+Eva Sabater-Andres, content developer (Neural Networks)
+Lauren McMahon, content developer (AI ethics)
 
 A University of Sussex project.
 
